@@ -1,0 +1,7 @@
+router-outlet ~ * {
+  position: absolute;
+  height: 100%;
+  width: 90%;
+  display: block;
+  margin: auto;
+}

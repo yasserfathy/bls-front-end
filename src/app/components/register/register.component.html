@@ -1,0 +1,25 @@
+<div class="container col-md-3 all" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+    <form class="example-form">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Username" [(ngModel)]="user.name" name="name">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Password" [(ngModel)]="user.password" name="password">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Branch"  [(ngModel)]="user.branch" name="branch">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Warehouse" [(ngModel)]="user.custName" name="custName">
+        </mat-form-field>
+
+      </mat-card-content>
+      <button mat-stroked-button color="accent" class=" btn btn-danger btn-block" routerLink="/login" (click)="save($event)">Register</button>
+    </form>
+  </mat-card>
+</div>

@@ -1,0 +1,76 @@
+<br>
+<br>
+<br>
+<div class="container col-md-3">
+  <div class="row align-items-center">
+    <div class="col-6 col-sm-4">
+      <div class="grid-item">User Name</div>
+    </div>
+    <div class="col-6 col-sm-4">
+      <div class="grid-item">{{user.name}}</div>
+    </div>
+  </div>
+  <br>
+  <div class="row align-items-center">
+    <div class="col-6 col-sm-4">
+      <div class="grid-item">Branch</div>
+    </div>
+    <div class="col-6 col-sm-4">
+      <div class="grid-item">{{user.branch}}</div>
+    </div>
+  </div>
+  <br>
+  <div class="row align-items-center">
+    <div class="col-6">
+      <input placeholder="row" class="grid-item" [(ngModel)]="matrix.rowNum">
+    </div>
+    <div class="col-6">
+      <input placeholder="col" class="grid-item" [(ngModel)]="matrix.colNum">
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<div class="container col-12">
+  <div class="vertical-center">
+    <button type="button" class="btn btn-info" style="width: 150px" (click)="change($event)">Draw</button>
+  </div>
+</div>
+<br>
+<br>
+<br>
+
+<div class="container" *ngIf="showFlag">
+  <div class="row">
+    <div class="col">
+      <input type="text"  [(ngModel)]="btnText">
+    </div>
+    <div class="col">
+      <button color="accent" class="btn-block" (click)="saveButtonClicked()">Save</button>
+    </div>
+  </div>
+  <br>
+</div>
+
+
+
+<div class="container" style="border-spacing: 40px" *ngFor="let matrixObj of matrices">
+  <div>
+    <label>Matrix : {{matrixObj.id}}</label>
+    <div class="row" style="padding-bottom: 20px"  *ngFor="let in of counter(matrixObj.rowNum) ;let i = index">
+      <div class="col" *ngFor="let in of counter(matrixObj.colNum) ;let j = index">
+        <div>
+          <button type="button" style="width: 100%" class="btn btn-dark" (click)="add($event, matrixObj.id, i, j)">{{letters[i] + j}}</button>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+</div>
+
+
+
+
+
+

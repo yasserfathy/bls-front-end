@@ -1,0 +1,24 @@
+.grid-container {
+  display: grid;
+  /*grid-template-columns: auto auto ;*/
+  grid-template-columns: 2fr 2fr ;
+  padding: 10px;
+}
+.grid-item {
+  /*margin: 5px 50px;*/
+  font-size: 14px;
+  text-align: center;
+}
+.btn-block {
+  display: block;
+  width: 50px;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  left: 45%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
